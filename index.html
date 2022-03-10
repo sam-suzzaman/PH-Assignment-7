@@ -89,7 +89,8 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                goes here
+                <p>JavaScript code এতে যে Function গুলো কল করা হয় সেগুলো প্রথমে <b>Call Stack</b> এতে Stack আকারে অবস্থান করে এবং <b>Last In First Out</b> অনুযায়ী execute হয়। তবে যখন একটা <b>Asynchronous function</b> call stack এ আসে তখন call stack ঐ function কে <b>Web API</b> তে ট্র্যান্সফার করে দেয় এবং সেখান থেকে একটা সময় পরে <b>Callback Queue</b> আসে।</p>
+                <p>এরপর যখন <b>Call Stack</b> এ execute করার মতো ফাংশন থাকে না তখন <b>Event Loop</b>, callback-quequ তে থাকা প্রথম ফাংশনকে call-stack এ নিয়ে যায় এবং তখন ঐ ফাংশনটি execute হয়। এভাবে call-stack queue তে থাকা সকল ফাংশনকে call-stack এ নিয়ে যায় <b>Event loop</b> এবং ঐ ফাংশনগুলো execute হয়। </p>
                 </div>
               </div>
             </div>
@@ -102,7 +103,26 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  
+                   <div class="row mt-4">
+                    <div class="col-md-6 col-10">
+                        <h5>Local Storage</h5>
+                        <ul class="ps-0">
+                            <li class="list-group-item">these data can accessible from any window</li>
+                            <li class="list-group-item">It has no expire date or time</li>
+                            <li class="list-group-item">সকল tab এর জন্যই data একই থাকে। </li>
+                            <li class="list-group-item">একে JavaScript বা Manually Delete করার পর storage থেকে রিমুভ হয়। </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-10">
+                        <h5>Session Storage</h5>
+                        <ul class="ps-0">
+                            <li class="list-group-item">these data only accessible on the current tab</li>
+                            <li class="list-group-item">it retains till the tab is on</li>
+                            <li class="list-group-item">Tab কপি করলে data একই থাকে</li>
+                            <li class="list-group-item">These data automatically delete with closing the tab or browser</li>
+                        </ul>
+                    </div>
+                   </div>
                 </div>
               </div>
             </div>
