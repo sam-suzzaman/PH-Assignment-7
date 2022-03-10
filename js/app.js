@@ -27,7 +27,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -152,6 +152,10 @@ const displayLikedPosts = () => {
   const container=document.getElementById("liked");
   container.innerHTML="";
   const likedPosts = getLikedPosts();
+
+  if(likedPosts.length===0){
+    container.innerHTML=`<h2>Liked Posts</h2>`
+  }
   likedPosts.forEach((post) => {
     const div = createPost(post);
     container.appendChild(div);
